@@ -1,0 +1,248 @@
+//
+//  PrefixHeader.pch
+//  LoveXiangsu
+//
+//  Created by 张婷 on 15/10/25.
+//  Copyright (c) 2015年 MingRui Info Tech. All rights reserved.
+//
+
+#ifndef LoveXiangsu_PrefixHeader_pch
+#define LoveXiangsu_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//引入系统框架
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <QuartzCore/QuartzCore.h>
+#import <AMapLocationKit/AMapLocationKit.h>
+#import <MAMapKit/MAMapKit.h>
+
+#import "ChatDemoUIDefine.h"
+#import "EMAlertView.h"
+#import "TTGlobalUICommon.h"
+#import "UIViewController+HUD.h"
+#import "UIViewController+DismissKeyboard.h"
+#import "NSString+Valid.h"
+#import "LXCommon.h"
+
+#import "JPUSHService.h"
+
+#import "MTA.h"
+#import "MTAConfig.h"
+
+#import "EaseMob.h"
+
+/**
+ * 各个小区配置信息
+ */
+#if defined(LXTARGET_VERSION_XIANGSU)
+
+/**
+ * 爱像素
+ */
+// 高德地图
+#define MAMAP_APIKEY                     @"73466bb231575764cef2b1e5bd738554"
+
+#define APNS_CERT_DEV                    @"lovexiangsudev"
+#define APNS_CERT_PRO                    @"lovexiangsupro"
+
+#elif defined(LXTARGET_VERSION_AIYUE)
+
+/**
+ * 爱爱乐
+ */
+// 高德地图
+#define MAMAP_APIKEY                     @"e028d48064ee91343dda98571059d389"
+
+#define APNS_CERT_DEV                    @"loveaiyuedev"
+#define APNS_CERT_PRO                    @"loveaiyuepro"
+
+#elif defined(LXTARGET_VERSION_BAOLI)
+
+/**
+ * 爱保利（保利嘉园）
+ */
+// 高德地图
+#define MAMAP_APIKEY                     @"7478071a870c1a755deacef51e804b9d"
+
+#define APNS_CERT_DEV                    @"lovebaolidev"
+#define APNS_CERT_PRO                    @"lovebaolipro"
+
+#elif defined(LXTARGET_VERSION_CHANGXIN)
+
+/**
+ * 爱畅心（畅心园）
+ */
+// 高德地图
+#define MAMAP_APIKEY                     @"bbcfabeb14012f13951dad94524c7e66"
+
+#define APNS_CERT_DEV                    @"lovechangxindev"
+#define APNS_CERT_PRO                    @"lovechangxinpro"
+
+#elif defined(LXTARGET_VERSION_FUDI)
+
+/**
+ * 爱福第
+ */
+// 高德地图
+#define MAMAP_APIKEY                     @"2f0c29772368c8354fb1f9d8189621bb"
+
+#define APNS_CERT_DEV                    @"lovefudidev"
+#define APNS_CERT_PRO                    @"lovefudipro"
+
+#elif defined(LXTARGET_VERSION_GONGYUAN)
+
+/**
+ * 爱公元
+ */
+// 高德地图
+#define MAMAP_APIKEY                     @"c4771b6663ef30bf273f08344d31f945"
+
+#define APNS_CERT_DEV                    @"lovegongyuandev"
+#define APNS_CERT_PRO                    @"lovegongyuanpro"
+
+#elif defined(LXTARGET_VERSION_LIJING)
+
+/**
+ * 爱丽景
+ */
+// 高德地图
+#define MAMAP_APIKEY                     @"1a38c18d3e98637d7d1d165cebb09c50"
+
+#define APNS_CERT_DEV                    @"lovelijingdev"
+#define APNS_CERT_PRO                    @"lovelijingpro"
+
+#elif defined(LXTARGET_VERSION_LIANXIN)
+
+/**
+ * 爱连心
+ */
+// 高德地图
+#define MAMAP_APIKEY                     @"03d45179ecacb8db7ee71445b68845ed"
+
+#define APNS_CERT_DEV                    @"lovelianxindev"
+#define APNS_CERT_PRO                    @"lovelianxinpro"
+
+#elif defined(LXTARGET_VERSION_MINZU)
+
+/**
+ * 爱民族
+ */
+// 高德地图
+#define MAMAP_APIKEY                     @"85ab3ee715abf88e89a40f34561bc47e"
+
+#define APNS_CERT_DEV                    @"loveminzudev"
+#define APNS_CERT_PRO                    @"loveminzupro"
+
+#elif defined(LXTARGET_VERSION_PINGGUOPAI)
+
+/**
+ * 爱苹果派
+ */
+// 高德地图
+#define MAMAP_APIKEY                     @"d820855405bb5ac06e4c1d5f020943e1"
+
+#define APNS_CERT_DEV                    @"lovepingguopaidev"
+#define APNS_CERT_PRO                    @"lovepingguopaipro"
+
+#elif defined(LXTARGET_VERSION_TIANJIE)
+
+/**
+ * 爱天街
+ */
+// 高德地图
+#define MAMAP_APIKEY                     @"a6eadfddce71579f1fa56619f76b364e"
+
+#define APNS_CERT_DEV                    @"lovetianjiedev"
+#define APNS_CERT_PRO                    @"lovetianjiepro"
+
+#elif defined(LXTARGET_VERSION_WANXIANG)
+
+/**
+ * 爱万象
+ */
+// 高德地图
+#define MAMAP_APIKEY                     @"e1c2199dd34f094eb43012b69dafd292"
+
+#define APNS_CERT_DEV                    @"lovewanxiangdev"
+#define APNS_CERT_PRO                    @"lovewanxiangpro"
+
+#elif defined(LXTARGET_VERSION_YANGGUANG)
+
+/**
+ * 爱阳光
+ */
+// 高德地图
+#define MAMAP_APIKEY                     @"990ee4b6b66274e29761250c2a7e91ab"
+
+#define APNS_CERT_DEV                    @"loveyangguangdev"
+#define APNS_CERT_PRO                    @"loveyangguangpro"
+
+#elif defined(LXTARGET_VERSION_ZHUXIN)
+
+/**
+ * 爱住欣
+ */
+// 高德地图
+#define MAMAP_APIKEY                     @"e3ff1cbbf461edd05a5136a2cc847792"
+
+#define APNS_CERT_DEV                    @"lovezhuxindev"
+#define APNS_CERT_PRO                    @"lovezhuxinpro"
+
+#endif
+
+// 环信
+#define EASEMOB_APPKEY                   @"thewbb#aixiangsu"
+#define EASEMOB_PASSWORD                 @"11204122"
+#define EASEMOB_INTERVAL                 7200
+// 环信账号：thewbb@qq.com/010681
+
+// OSS服务器
+#define OSS_AccessKey                    @"NxzOt7uc4G7zZDVH"
+#define OSS_SecretKey                    @"BD8oWUFH12LFoEmKyFyeseJxYDHKKr"
+#define OSS_BucketName                   @"xiaoqu21"
+#define OSS_EndPoint                     @"http://oss-cn-beijing.aliyuncs.com"
+// Access Key ID: NxzOt7uc4G7zZDVH
+// Access Key Secret: BD8oWUFH12LFoEmKyFyeseJxYDHKKr
+// 北京数据中心	http://oss-cn-beijing.aliyuncs.com
+
+// ShareSDK
+#define SHARESDK_APPKEY                  @"8e98814c040a"
+
+/**
+ * 图片相关
+ */
+#define MAX_UPLOAD_IMAGE                 9
+// 图片的长边不能超过1440
+#define MAX_IMAGE_SIZE                   1440
+// 图片所在沙盒根目录
+#define SANDBOX_IMAGE_PATH               @"OSSIMAGE"
+// 店铺图片：年/月/guid.扩展名
+
+/**
+ * 苹果开发者账号
+ */
+// Junior.wang@hotmail.com/19820703Wxj
+
+//define this constant if you want to use Masonry without the 'mas_' prefix
+#define MAS_SHORTHAND
+
+//define this constant if you want to enable auto-boxing for default syntax
+#define MAS_SHORTHAND_GLOBALS
+
+#import "Masonry.h"
+
+#endif
+#endif
+
+//只在debug模式下才会编译NSLog
+#ifdef DEBUG
+#define debugMethod() NSLog(format, ...)
+#else
+#define NSLog(...)
+#define debugMethod()
+
+#endif
